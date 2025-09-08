@@ -49,7 +49,7 @@ export const createNote = async (note: CreateNoteDto): Promise<Note> => {
   return data;
 };
 
-export const deleteNote = async (id: number): Promise<Note> => {
+export const deleteNote = async (id: string): Promise<Note> => {
   const { data } = await instance.delete<Note>(`/${id}`);
   return data;
 };
